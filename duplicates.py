@@ -1,7 +1,10 @@
 import hashlib
 import collections
+from time import time
 
 i = 0
+
+t1 = time()
 
 d = collections.defaultdict(list)
 with open('test_data.txt', 'r') as datafile:
@@ -17,3 +20,6 @@ with open('test_data.txt', 'r') as datafile:
             d[k].append(v)
         
         i = i + 1 
+
+t2 = time()
+print("Runtime: ", t2- t1)
